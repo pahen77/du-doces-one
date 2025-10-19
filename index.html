@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Du Doces Distribuidora - E‑Commerce</title>
+  <meta name="description" content="Du Doces Distribuidora — bebidas, chocolates, salgadinhos e utilidades com entrega rápida.">
+  <meta name="theme-color" content="#C62828">
+  <meta property="og:site_name" content="Du Doces Distribuidora">
+  <meta property="og:title" content="Du Doces Distribuidora - E‑Commerce">
+  <meta property="og:description" content="As melhores marcas de bebidas, chocolates, salgadinhos e utilidades.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="stylesheet" href="./style.css"/>
+</head>
+<body class="dark">
+  <!-- Top bar -->
+  <header class="topbar">
+    <button id="btnMenu" aria-label="Menu">☰</button>
+    <h1 class="logo">Du Doces <span>Distribuidora</span></h1>
+    <div class="top-actions">
+      <input id="search" type="search" placeholder="Buscar produtos...">
+      <button id="btnCart" aria-label="Carrinho">🛒 <span id="cartBadge">0</span></button>
+    </div>
+  </header>
+
+  <!-- Side menu -->
+  <aside id="sideMenu" class="drawer">
+    <button class="close" data-close>×</button>
+    <nav>
+      <a href="#/" data-close>Início</a>
+      <a href="#/login" data-close>Login / Cadastro</a>
+      <a href="#/conta" data-close>Minha Conta</a>
+      <a href="#/sobre" data-close>Sobre Nós</a>
+      <a href="#/contato" data-close>Contato</a>
+      <a href="#/politica" data-close>Política de Privacidade</a>
+      <a href="#/termos" data-close>Termos de Uso</a>
+      <hr>
+      <button id="toggleTheme">Alternar tema</button>
+    </nav>
+  </aside>
+
+  <!-- Main SPA container -->
+  <main id="app"></main>
+
+  <!-- Carrinho drawer -->
+  <aside id="cartDrawer" class="drawer right">
+    <button class="close" data-close>×</button>
+    <h3>Carrinho</h3>
+    <div id="cartList"></div>
+    <div class="cart-footer">
+      <div>Total: <strong id="cartTotal">R$ 0,00</strong></div>
+      <a class="btn primary" href="#/checkout">Finalizar</a>
+    </div>
+  </aside>
+
+  <!-- Floating AI button -->
+  <button id="fabAI" class="fab" title="Posso ajudar?">🤖</button>
+
+  <!-- Products fallback JSON (used if API unavailable) -->
+  <script type="application/json" id="productsData">
+  [
+    {"id":1,"name":"Água LA 510ml (unidade)","brand":"LA","category":"Bebidas","price_cents":75,"promo":0,"image":""},
+    {"id":2,"name":"Água LA 510ml (fardo c/12)","brand":"LA","category":"Bebidas","price_cents":900,"promo":1,"image":""},
+    {"id":3,"name":"ThreeBond Cola (unidade)","brand":"ThreeBond","category":"Utilidades","price_cents":199,"promo":0,"image":""},
+    {"id":4,"name":"SuperBond Cola (unidade)","brand":"SuperBond","category":"Utilidades","price_cents":495,"promo":0,"image":""},
+    {"id":5,"name":"Pipoca OZ 40g Doce (unidade)","brand":"OZ","category":"Salgadinhos","price_cents":70,"promo":0,"image":""},
+    {"id":6,"name":"Pipoca OZ 40g Salgada (unidade)","brand":"OZ","category":"Salgadinhos","price_cents":70,"promo":0,"image":""},
+    {"id":7,"name":"Pipoca OZ 40g Doce (fardo c/30)","brand":"OZ","category":"Salgadinhos","price_cents":2100,"promo":1,"image":""},
+    {"id":8,"name":"Pipoca OZ 40g Salgada (fardo c/30)","brand":"OZ","category":"Salgadinhos","price_cents":2100,"promo":1,"image":""},
+    {"id":9,"name":"Pipoca OZ 12g Doce (c/50)","brand":"OZ","category":"Salgadinhos","price_cents":1650,"promo":1,"image":""},
+    {"id":10,"name":"Coca-Cola 350ml (unidade)","brand":"Coca-Cola","category":"Bebidas","price_cents":325,"promo":0,"image":""},
+    {"id":11,"name":"Coca-Cola 200ml PET (unidade)","brand":"Coca-Cola","category":"Bebidas","price_cents":165,"promo":0,"image":""},
+    {"id":12,"name":"Coca-Cola 200ml Zero PET (unidade)","brand":"Coca-Cola","category":"Bebidas","price_cents":165,"promo":0,"image":""},
+    {"id":13,"name":"Tang Sabor Laranja 25g","brand":"Tang","category":"Bebidas","price_cents":289,"promo":0,"image":""},
+    {"id":14,"name":"Tang Sabor Uva 25g","brand":"Tang","category":"Bebidas","price_cents":289,"promo":0,"image":""},
+    {"id":15,"name":"Chocolate Arcor 45g","brand":"Arcor","category":"Chocolates","price_cents":425,"promo":0,"image":""},
+    {"id":16,"name":"Chocolate Nestlé 90g","brand":"Nestlé","category":"Chocolates","price_cents":895,"promo":1,"image":""},
+    {"id":17,"name":"Chocolate Lacta 100g","brand":"Lacta","category":"Chocolates","price_cents":756,"promo":0,"image":""},
+    {"id":18,"name":"Salgadinho Santa Helena 50g","brand":"Santa Helena","category":"Salgadinhos","price_cents":450,"promo":0,"image":""}
+  ]
+  </script>
+
+  <!-- Config variables -->
+  <script src="./config.js"></script>
+  <!-- App JS -->
+  <script src="./app.js"></script>
+  <!-- ChatVolt integration -->
+  <script src="https://chatvolt.ai/widget.js" data-chatvolt-key="cmfk2a6ko0w5htglbf0n10833"></script>
+</body>
+</html>
