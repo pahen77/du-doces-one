@@ -41,15 +41,37 @@ E-commerce completo para Du Doces Distribuidora com frontend responsivo, backend
 - QR Code para PIX
 - CORS habilitado
 
-## 🚀 Deploy
+## 🚀 Deploy no Railway
 
-### Railway (Full-Stack)
-1. Conecte seu repositório ao Railway
-2. Configure as variáveis de ambiente:
-   - `JWT_SECRET`: Chave secreta para JWT (ex: "sua-chave-super-secreta-123")
-   - `PORT`: Porta do servidor (Railway define automaticamente)
-3. O Railway irá detectar automaticamente o `package.json` e fazer o deploy
-4. O frontend e backend serão servidos da mesma URL automaticamente
+### Passo a Passo Completo
+
+1. **Preparação do Projeto**
+   - O projeto já está configurado com `railway.json` e `.gitignore`
+   - Todas as dependências estão no `package.json`
+   - O código está otimizado para produção
+
+2. **Deploy no Railway**
+   - Acesse [Railway.app](https://railway.app)
+   - Faça login com sua conta GitHub
+   - Clique em "New Project" → "Deploy from GitHub repo"
+   - Selecione este repositório
+   - O Railway detectará automaticamente o Node.js
+
+3. **Configuração de Variáveis de Ambiente**
+   - No dashboard do Railway, vá em "Variables"
+   - Adicione a variável:
+     - `JWT_SECRET`: Uma chave secreta forte (ex: "sua-chave-super-secreta-123")
+   - A variável `PORT` é definida automaticamente pelo Railway
+
+4. **Deploy Automático**
+   - O Railway fará o build e deploy automaticamente
+   - O frontend e backend serão servidos da mesma URL
+   - Acesse a URL fornecida pelo Railway
+
+### ✅ Verificação Pós-Deploy
+- Acesse `/health` para verificar se a API está funcionando
+- Teste o carrinho e sistema de pagamento
+- Verifique se o ChatVolt está funcionando
 
 ## 📱 Uso
 

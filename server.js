@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.json({ limit: "1mb" }));
 
 // Environment variables
-const JWT_SECRET = process.env.JWT_SECRET || "development-secret";
+const JWT_SECRET = process.env.JWT_SECRET || "development-secret-key-change-in-production";
 const PORT = process.env.PORT || 3000;
 
 // Initialize SQLite
